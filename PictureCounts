@@ -1,0 +1,18 @@
+#Create three folders called: JPG, PNG, TIFF
+mkdir JPG PNG TIFF
+#Locate all .jpg, .png and .tiff files inside the folder and copy each into their respective folder
+## Locate all .jpg files inside the folder and copy into JPG folder
+find . -type f -iname *.jpg* -exec cp {} JPG/ \;
+## Locate all .png files inside the folder and copy into PNG folder
+find . -type f -iname *.png* -exec cp {} PNG/ \;
+##Locate all .tiff files inside the folder and copy into TIFF folder
+find . -type f -iname *.tiff*  -exec cp {} TIFF/ \;
+#Create a new file called PictureCounts.md
+touch PictureCounts.md
+#Count how many times each file type occurs and log results to the PictureCounts.md file
+##Count how many times .jpg file type occurs and log results into PictureCounts.md file
+find . -type f -iname *.jpg* | wc -l > PictureCounts.md
+##Count how many times .png file type occurs and log results into PictureCounts.md file
+find . -type f -iname *.png* | wc -l >> PictureCounts.md
+##Count how many times .tiff file type occurs and log results into PictureCounts.md file
+find . -type f -iname *.tiff* | wc -l >> PictureCounts.md
