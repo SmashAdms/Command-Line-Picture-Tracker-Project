@@ -1,4 +1,4 @@
-# Picture-Tracker
+# Picture-Tracker-Project
 In this project I created a shell script to identify all image files within a set of directories and move those files to a new directory without altering the original images.
 I started with a zipped file (Pictures.zip) filled with folders of images. 
 My ideas was to create a shell script to complete the following:
